@@ -20,6 +20,25 @@ imgContainer.innerHTML += imgStamp;
 let counterImg = 0;
 
 const imgDisplayed = document.getElementsByClassName('img-displayed');
+const upArrow = document.querySelector('.arrow.up');
+const downArrow = document.querySelector('.arrow.down');
+
+console.log(upArrow, downArrow);
 
 imgDisplayed[counterImg].classList.add('active');
 
+upArrow.addEventListener('click', function(){
+
+  imgDisplayed[counterImg].classList.remove('active');
+  counterImg++;
+  imgDisplayed[counterImg].classList.add('active');
+  
+});
+
+downArrow.addEventListener('click', function(){
+
+  imgDisplayed[counterImg].classList.remove('active');
+  counterImg--;
+  imgDisplayed[counterImg].classList.add('active');
+  
+});
