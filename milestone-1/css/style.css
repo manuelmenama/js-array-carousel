@@ -7,3 +7,58 @@
 body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+img{
+  max-width: 100%;
+}
+
+.debug{
+  background-color: rgba(200, 200, 100, 0.3);
+  border: 1px solid black;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.container{
+  width: 60%;
+  margin: 100px auto;
+}
+
+.wrapper{
+  position: relative;
+}
+
+.img-displayed{
+  width: 500px;
+  object-fit: contain;
+}
+
+.arrow{
+  cursor: pointer;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  background-color: white;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.arrow:hover{
+  opacity: 1;
+}
+
+.arrow.up{
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow.down{
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
