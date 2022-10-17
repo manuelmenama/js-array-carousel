@@ -29,16 +29,28 @@ imgDisplayed[counterImg].classList.add('active');
 
 upArrow.addEventListener('click', function(){
 
-  imgDisplayed[counterImg].classList.remove('active');
-  counterImg++;
-  imgDisplayed[counterImg].classList.add('active');
+  if(counterImg === imgArray.length - 1){
+    imgDisplayed[counterImg].classList.remove('active');
+    counterImg = 0;
+    imgDisplayed[counterImg].classList.add('active');
+  }else{
+    imgDisplayed[counterImg].classList.remove('active');
+    counterImg++;
+    imgDisplayed[counterImg].classList.add('active');
+  }
   
 });
 
 downArrow.addEventListener('click', function(){
 
-  imgDisplayed[counterImg].classList.remove('active');
-  counterImg--;
-  imgDisplayed[counterImg].classList.add('active');
-  
+  if(counterImg === 0){
+    imgDisplayed[counterImg].classList.remove('active');
+    counterImg = imgArray.length - 1;
+    imgDisplayed[counterImg].classList.add('active');
+  }else{
+    imgDisplayed[counterImg].classList.remove('active');
+    counterImg--;
+    imgDisplayed[counterImg].classList.add('active');
+  }
+
 });
