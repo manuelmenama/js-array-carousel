@@ -24,6 +24,10 @@ body{
 
 }
 
+.c-flex{
+  display: flex;
+}
+
 .main-wrapper{
   height: 100vh;
   display: flex;
@@ -37,7 +41,7 @@ body{
 }
 
 .img-displayed{
-  width: 500px;
+  width: 400px;
   height: 250px;
   object-fit: cover;
   display: none;
@@ -45,6 +49,11 @@ body{
 
 .img-displayed.active{
   display: inline-block;
+}
+
+.img-prewiev{
+  height: 250px;
+  width: 100px;
 }
 
 .arrow{
