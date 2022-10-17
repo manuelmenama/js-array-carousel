@@ -6,36 +6,43 @@ const imgArray = [
   '05.jpg'
 ];
 
+
 let imgStamp = '';
 let miniatureStamp = '';
 
 const imgContainer = document.querySelector('.img-container');
 const imgPreview = document.querySelector('.img-prewiev');
 
+//creo dinamicamente le mie immagini e il nav dell'album
 for(let i = 0; i < imgArray.length; i++){
   imgStamp += `<img class="img-displayed" src="img/${imgArray[i]}" alt="${imgArray[i]}">`;
   console.log(imgStamp);
   miniatureStamp += `<img class="miniature" src="img/${imgArray[i]}" alt="${imgArray[i]}">`;
 }
-
+//assegno all'elemento contenitore i tag che finiranno nell'html
 imgContainer.innerHTML += imgStamp;
 imgPreview.innerHTML += miniatureStamp;
 
+//il contatore parte da 0
 let counterImg = 0;
 
+//assegno ad una costante gli elementi img del mio html
 const imgDisplayed = document.getElementsByClassName('img-displayed');
 const miniature = document.getElementsByClassName('miniature');
 
+//assegno ad una costante gli elementi freccia
 const upArrow = document.querySelector('.arrow.up');
 const downArrow = document.querySelector('.arrow.down');
 
 console.log(upArrow, downArrow);
 
+//di default assegno la classe active ai miei primi elementi
 imgDisplayed[counterImg].classList.add('active');
 miniature[counterImg].classList.add('active');
 
+//alla pressione della freccia in basso scorro in avanti i mie elementi
 downArrow.addEventListener('click', function(){
-
+  //condizione per lo scrolling infinito
   if(counterImg === imgArray.length - 1){
     imgDisplayed[counterImg].classList.remove('active');
     miniature[counterImg].classList.remove('active');
@@ -52,6 +59,7 @@ downArrow.addEventListener('click', function(){
   
 });
 
+//alla pressione della freccia in su scorro in indietro i mie elementi
 upArrow.addEventListener('click', function(){
 
   if(counterImg === 0){

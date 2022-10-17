@@ -1,3 +1,4 @@
+/* general */
 *{
   margin: 0;
   padding: 0;
@@ -8,16 +9,7 @@ body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
-.debug{
-  background-color: rgba(200, 200, 100, 0.3);
-  border: 1px solid black;
-}
-
-.w-100{
-  width: 100%;
-}
-
+/* utilities */
 .container{
   width: 500px;
   margin: 100px auto;
@@ -28,6 +20,7 @@ body{
   display: flex;
 }
 
+/* main */
 .main-wrapper{
   height: 100vh;
   display: flex;
@@ -35,6 +28,7 @@ body{
   align-items: center;
 }
 
+/* la card contiene l'img e la nav dell'album */
 .card{
   height: 100%;
   position: relative;
@@ -69,6 +63,7 @@ body{
   border: 1px solid gray;
 }
 
+/* frecce */
 .arrow{
   cursor: pointer;
   text-align: center;
