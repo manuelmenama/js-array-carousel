@@ -54,6 +54,19 @@ body{
 .img-prewiev{
   height: 250px;
   width: 100px;
+  flex-direction: column;
+}
+
+.miniature{
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+  filter: brightness(0.3);
+}
+
+.miniature.active{
+  filter: brightness(1);
+  border: 1px solid gray;
 }
 
 .arrow{
@@ -74,12 +87,12 @@ body{
 
 .arrow.up{
   top: 10px;
-  left: 50%;
+  right: 25px;
   transform: translateX(-50%);
 }
 
 .arrow.down{
   bottom: 10px;
-  left: 50%;
+  right: 25px;
   transform: translateX(-50%);
 }
