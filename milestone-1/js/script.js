@@ -15,7 +15,6 @@ for(let i = 0; i < imgArray.length; i++){
   console.log(imgStamp);
 }
 
-
 imgContainer.innerHTML += imgStamp;
 
 let counterImg = 0;
