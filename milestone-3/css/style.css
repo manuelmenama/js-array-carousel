@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.debug{
+  background-color: rgba(200, 200, 100, 0.3);
+  border: 1px solid black;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.container{
+  width: 500px;
+  margin: 100px auto;
+
+}
+
+.main-wrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  height: 100%;
+  position: relative;
+}
+
+.img-displayed{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.img-displayed.active{
+  display: inline-block;
+}
+
+.arrow{
+  cursor: pointer;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  background-color: white;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.arrow:hover{
+  opacity: 1;
+}
+
+.arrow.up{
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow.down{
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
