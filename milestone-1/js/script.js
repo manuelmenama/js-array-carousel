@@ -13,9 +13,6 @@ let miniatureStamp = '';
 const imgContainer = document.querySelector('.img-container');
 const imgPreview = document.querySelector('.img-prewiev');
 
-//assegno ad una costante gli elementi img del mio html
-const imgDisplayed = document.getElementsByClassName('img-displayed');
-const miniature = document.getElementsByClassName('miniature');
 
 //assegno ad una costante gli elementi freccia
 const upArrow = document.querySelector('.arrow.up');
@@ -34,12 +31,16 @@ imgPreview.innerHTML += miniatureStamp;
 //il contatore di interazioni parte da 0
 let counterImg = 0;
 
-
-console.log(upArrow, downArrow);
+//assegno ad una costante gli elementi img del mio html
+const imgDisplayed = document.getElementsByClassName('img-displayed');
+const miniature = document.getElementsByClassName('miniature');
 
 //di default assegno la classe active ai miei primi elementi
 imgDisplayed[counterImg].classList.add('active');
 miniature[counterImg].classList.add('active');
+
+
+console.log(upArrow, downArrow);
 
 //alla pressione della freccia in basso scorro in avanti i mie elementi
 downArrow.addEventListener('click', function(){
