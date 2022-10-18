@@ -13,6 +13,14 @@ let miniatureStamp = '';
 const imgContainer = document.querySelector('.img-container');
 const imgPreview = document.querySelector('.img-prewiev');
 
+//assegno ad una costante gli elementi img del mio html
+const imgDisplayed = document.getElementsByClassName('img-displayed');
+const miniature = document.getElementsByClassName('miniature');
+
+//assegno ad una costante gli elementi freccia
+const upArrow = document.querySelector('.arrow.up');
+const downArrow = document.querySelector('.arrow.down');
+
 //creo dinamicamente le mie immagini e il nav dell'album
 for(let i = 0; i < imgArray.length; i++){
   imgStamp += `<img class="img-displayed" src="img/${imgArray[i]}" alt="${imgArray[i]}">`;
@@ -23,16 +31,9 @@ for(let i = 0; i < imgArray.length; i++){
 imgContainer.innerHTML += imgStamp;
 imgPreview.innerHTML += miniatureStamp;
 
-//il contatore parte da 0
+//il contatore di interazioni parte da 0
 let counterImg = 0;
 
-//assegno ad una costante gli elementi img del mio html
-const imgDisplayed = document.getElementsByClassName('img-displayed');
-const miniature = document.getElementsByClassName('miniature');
-
-//assegno ad una costante gli elementi freccia
-const upArrow = document.querySelector('.arrow.up');
-const downArrow = document.querySelector('.arrow.down');
 
 console.log(upArrow, downArrow);
 
